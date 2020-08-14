@@ -17,7 +17,6 @@ export class GetTeamDataController {
     @Get("/:idTournament/:idTeam")
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     getTeam(@Param('idTournament') idTournament, @Param('idTeam') idTeam) {
-        console.log("funciona")
         return this.teamService.getTeam(idTournament, idTeam);
     }
 }
