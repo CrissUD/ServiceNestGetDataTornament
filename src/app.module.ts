@@ -7,10 +7,11 @@ import { GetMatchDataController } from './controllers/get-match-data/get-match-d
 import { TournamentService } from './services/tournament/tournament.service';
 import { TeamService } from './services/team/team.service';
 import { MatchService } from './services/match/match.service';
+import { FirebaseService } from './services/firebase/firebase.service';
 
 @Module({
   imports: [],
   controllers: [AppController, GetTeamDataController, GetTournamentDataController, GetMatchDataController],
-  providers: [AppService, TournamentService, TeamService, MatchService],
+  providers: [AppService, TournamentService, TeamService, MatchService, FirebaseService],
 })
 export class AppModule {}
