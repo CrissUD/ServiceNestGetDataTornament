@@ -25,15 +25,80 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Servicio Nest encargado de la obtención de datos de entidades y elementos dentro de una **Base de datos no relacional montada en Firebase** que intervienen en la participación de un torneo de fútbol (Cuadrangular).
+Obtiene:
+* **Información general de torneos**.
+* **Listado de todos los equipos participantes**.
+* **Información especifica de un equipo**.
+* **Listado de todos los partidos**.
+* **Información especifica de un partido**.
 
 ## Installation
 
 ```bash
 $ npm install
 ```
+
+# Pruebas
+
+## Puerto
+```bash
+port: 3005
+```
+
+## Rutas y envíos
+
+## Obtener Información Torneo
+
+```bash
+get('localhost:3005/api/tournament/:idTournament')
+```
+<div align='center'>
+    <img  src='https://i.imgur.com/PsVz1vW.png'>
+    <p>Resultado obtención de datos del torneo</p>
+</div>
+
+## Obtener listado de equipos
+
+```bash
+get('localhost:3005/api/team/:idTournament')
+```
+<div align='center'>
+    <img  src='https://i.imgur.com/d0po6F2.png'>
+    <p>Resultado obtención del listado de equipos</p>
+</div>
+
+## Obtener datos de un equipo
+
+```bash
+get('localhost:3005/api/team/:idTournament/:idTeam')
+```
+<div align='center'>
+    <img  src='https://i.imgur.com/VZK9dk1.png'>
+    <p>Resultado obtención datos de un equipo</p>
+</div>
+
+## Obtener listado de partidos
+
+```bash
+get('localhost:3005/api/match/:idTournament')
+```
+<div align='center'>
+    <img  src='https://i.imgur.com/6yPPnpQ.png'>
+    <p>Resultado obtención del listado de partidos</p>
+</div>
+
+## Obtener datos de un partido
+
+```bash
+get('localhost:3005/api/match/:idTournament/:idMatch')
+```
+<div align='center'>
+    <img  src='https://i.imgur.com/XyXYTxf.png'>
+    <p>Resultado obtención datos de un partido</p>
+</div>
 
 ## Running the app
 
@@ -60,16 +125,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
